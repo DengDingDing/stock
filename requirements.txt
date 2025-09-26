@@ -1,0 +1,17 @@
+# FastAPI and server
+fastapi
+uvicorn[standard]
+
+# Database
+sqlalchemy[asyncio]
+aiomysql
+
+# Data manipulation and API interaction
+baostock
+pandas
+
+# Settings management
+pydantic-settings
+
+# For the `ON DUPLICATE KEY` feature in crud.py
+mysql-connector-python
