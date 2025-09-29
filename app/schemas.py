@@ -1,7 +1,7 @@
 """
-Pydantic models (schemas) for data validation and serialization.
+用于数据验证和序列化的Pydantic模型（模式）。
 
-These models define the shape of the data for API requests and responses.
+这些模型定义了API请求和响应中数据的结构。
 """
 from pydantic import BaseModel, Field
 from datetime import date, datetime
@@ -9,8 +9,7 @@ from typing import Optional, List
 from decimal import Decimal
 
 # Pydantic models should be configured to work with ORM objects.
-class Config:
-    from_attributes = True
+Config = {"from_attributes": True}
 
 # --- StockDailyData Schemas ---
 class StockDailyDataBase(BaseModel):

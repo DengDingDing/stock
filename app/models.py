@@ -1,7 +1,7 @@
 """
-SQLAlchemy ORM models for the application.
+应用程序的SQLAlchemy ORM模型。
 
-These models define the Python objects that map to the database tables.
+这些模型定义了映射到数据库表的Python对象。
 """
 import datetime
 from typing import List, Optional

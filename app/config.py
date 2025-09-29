@@ -1,10 +1,11 @@
 """
-Application configuration management.
+应用程序配置管理。
 
-Loads settings from environment variables and/or a .env file.
+从环境变量和/或.env文件加载设置。
 """
 from pydantic_settings import BaseSettings
 
+# 会优先去读取项目根目录的.env文件
 class Settings(BaseSettings):
     """
     Defines application settings, loaded from environment variables.

@@ -10,6 +10,8 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from .. import crud, schemas
 from ..database import get_db
 
+# 创建了一个带有前缀 /stocks 和标签 stocks 的路由器。
+# 这样，所有通过该路由器注册的接口都会自动带上 /stocks 前缀，并在自动生成的文档中归类到 stocks 标签下。
 router = APIRouter(
     prefix="/stocks",
     tags=["stocks"],
@@ -30,7 +32,7 @@ async def read_stock_daily_data(
     end_date: date = Query(..., description="End date for the data range (YYYY-MM-DD)"),
     db: AsyncSession = Depends(get_db)
 ):
-    """Retrieve historical daily data for a stock within a given date range."""
+    """获取股票在指定日期范围内的历史每日数据。"""
     stock_info = await crud.get_stock_info_by_symbol(db, symbol=symbol)
     if stock_info is None:
         raise HTTPException(status_code=404, detail="Stock not found")

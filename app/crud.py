@@ -1,7 +1,7 @@
 """
-CRUD (Create, Read, Update, Delete) operations for the database models.
+数据库模型的CRUD（创建、读取、更新、删除）操作。
 
-This module provides a data access layer for interacting with the database.
+该模块提供了一个与数据库交互的数据访问层。
 """
 from datetime import date
 from typing import List, Optional
